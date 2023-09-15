@@ -39,6 +39,19 @@ console.log(averageOfArray(arrayOfNumber));
 //5. Create a function to reverse a given string.
 
 function toReverseString(value) {
+  //split will convert the value into character.
+  // console.log('into characters',value.split(""));
+  /*
+  into array of characters [
+  's', 'u', 'r',
+  'm', 'a', 'n',
+  'i' ]*/
+
+  //will reverse the array of characters
+  // console.log(value.split("").reverse());
+
+  //later we will join the array of characters separated via ""
+
   return value.split("").reverse().join("");
 }
 

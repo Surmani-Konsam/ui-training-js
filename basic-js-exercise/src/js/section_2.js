@@ -45,6 +45,7 @@ function playerRemovedThanAdded(cricketPlayerName) {
 
 //4. sorted cricket players name
 function sortedCricketPlayerName() {
+  //Siraj is added as new player.
   let sortedCricketPlayers = playerRemovedThanAdded("Siraj").sort();
   // console.log('players are : ',sortedCricketPlayers.sort());
   return sortedCricketPlayers;
@@ -72,7 +73,7 @@ function myRandomJerseyNumber() {
     const arr = [];
     while (arr.length < 11) {
       let candidateInt = Math.floor(Math.random() * 11) + 1;
-      //if the candidateInt is not found
+      //if the candidateInt is not found the value returned will be -1
       if (arr.indexOf(candidateInt) === -1) {
         arr.push(candidateInt);
       }
