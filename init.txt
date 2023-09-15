@@ -1,1 +1,7 @@
 welcome to js 
+
+First basic js exercise
+
+Interns are expected to create a JS file and type/process the given statements. 
+No UI is expected. View the output in Console.
+
