@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIDS LEARNING APP</title>
+    
+    <!--adding css style to-->
+    <link rel="stylesheet" href="styles/css/btn-click.css" />
+
+    <!--linking js file via defer-->
+    <script src="js/btnclick.js" defer></script>
+  </head>
+
+
+  <!--body container-->
+  <body>
+    <!--parent-container-->
+    <article class="parent_container">
+      <!--header container-->
+      <section class="header">
+        <!--header container elements-->
+        <div class="math_kids">MATH KIDS</div>
+        <div class="learning_app">KIDS LEARNING APP</div>
+      </section>
+      <!--end of heade container-->
+
+      <!--start of learning content. All the shapes/figures (circle, square, triangle) are inside this container-->
+      <section class="learning_content">
+        <!--learning content header which changes dynamically via js function when click nxt_btn-->
+        <div class="learning_header">1. Choose a Shape</div>
+
+        <!--all the shapes are available here-->
+        <section class="shapes">
+          <!--shape circle-->
+          <div class="circle">
+            <div class="tick">
+              <!--image checked for tick mark transition from opacity of 0 to 1 in 0.3s-->
+              <img class="checked" src="assets/white_check.png" alt="check" />
+            </div>
+          </div>
+
+          <!--shape triangle-->
+          <div class="triangle">
+            <div class="tick triangle_tick">
+              <!--image checked for tick mark transition from opacity of 0 to 1 in 0.3s-->
+              <img
+                class="checked triangle_check"
+                src="assets/white_check.png"
+                alt="check"
+              />
+            </div>
+          </div>
+
+          <!--shape square-->
+          <div class="square">
+            <div class="tick square_tick">
+              <!--image checked for tick mark transition from opacity of 0 to 1 in 0.3s-->
+              <img class="checked" src="assets/white_check.png" alt="check" />
+            </div>
+          </div>
+        </section>
+
+        <!--btn_block which changes dynamically from nxt_btn to calculate when move on to next ui.-->
+        <div class="btn_block">
+          <div class="nxt_btn"></div>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>

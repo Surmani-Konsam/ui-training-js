@@ -1,1 +1,3 @@
 welcome to js 
+
+Simple exercise with btn click and local storage.
