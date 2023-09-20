@@ -14,8 +14,6 @@ let shape = {
 
   sideOrRadius: "",
 
-  isRadius: true,
-
   radius: "",
 
   base: "",
@@ -24,34 +22,29 @@ let shape = {
 
   //area specific to each figures
   area: function () {
-    if (this.isRadius) {
-        //if this.isRadius will calculate the area of circle
-      return 3.14 * (this.radius * this.radius);
-    } else if (this.name === ".triangle") {
-        //else trianlge
-      return 0.433 * this.base * this.height;
-    } else {
-        //else square
-      return this.base * this.base;
+    switch (this.name) {
+      case ".circle":
+        return Math.ceil(3.14 * (this.radius * this.radius));
+      case ".triangle":
+        return Math.ceil(0.433 * this.base * this.height);
+      case ".square":
+        return Math.ceil(this.base * this.base);
     }
   },
 
   //perimeter specific to each figures
   perimeter: function () {
-    if (this.isRadius) {
-        //if radius then it will calculate the perimeter of circle
-      return 2 * 3.14 * this.radius;
-    } else if (this.name === ".triangle") {
-        //else triangle
-      return 3 * this.base;
-    } else {
-        //else square
-      return 4 * this.base;
+    switch (this.name) {
+      case ".circle":
+        return Math.ceil(2 * 3.14 * this.radius);
+      case ".triangle":
+        return Math.ceil(3 * this.base);
+      case ".square":
+        return Math.ceil(4 * this.base);
     }
   },
 };
 //end of our global object.
-
 
 //function to reload the page all again bind to btn 'btn_reload'.
 function reload() {
@@ -142,13 +135,18 @@ function tableContent() {
 
 //common function for reuse in the nextBtn function.
 function calculateAreaAndObjectOfTheShape() {
-    //if triangle
-    if (shape["name"] === ".triangle") {
+  //if triangle
+  if (shape["name"] === ".triangle") {
     header.textContent = "2. Enter Side (Base & Height)";
-    shapes.style.cssText =
-        "display:inline-block; text-align:center; color : white";
-    shapes.innerHTML =
-        "Enter Base <input type='number' class='base'/> <div  class='height_parent'>Enter Height <input type='number'  class='height'/></div>";
+
+    const trianglCssTextContent =
+      "display:inline-block; text-align:center; color : white";
+    shapes.style.cssText = trianglCssTextContent;
+
+    const triangleInnerHtml =
+      "Enter Base <input type='number' class='base'/> <div  class='height_parent'>Enter Height <input type='number'  class='height'/></div>";
+    shapes.innerHTML = triangleInnerHtml;
+
     next_btn.textContent = "CALCULATE";
 
     /*
@@ -158,24 +156,28 @@ function calculateAreaAndObjectOfTheShape() {
     next_btn.removeEventListener("click", calculateAreaAndObjectOfTheShape);
 
     next_btn.addEventListener("click", () => {
-        shape["height"] = document.querySelector(".height").value; // Set shape["height"] here
-        shape["base"] = document.querySelector(".base").value;
-        const triangleObject = {
+      shape["height"] = document.querySelector(".height").value; // Set shape["height"] here
+      shape["base"] = document.querySelector(".base").value;
+      const triangleObject = {
         side: shape["base"] + " cm",
         area: shape.area() + " sq cm",
         perimeter: shape.perimeter() + " cm",
-        };
+      };
 
-        localStorage.setItem(shape["name"], JSON.stringify(triangleObject));
-        tableContent();
+      localStorage.setItem(shape["name"], JSON.stringify(triangleObject));
+      tableContent();
     });
-  } 
+  }
   //if circle
   else if (shape["name"] === ".circle") {
     header.textContent = "2. Enter Radius";
-    shapes.style.cssText =
+
+    const circleCssTextContent =
       "display:inline-block; text-align:center; color : white";
-    shapes.innerHTML = "<input type='number' class='radius' style='' /> ";
+    shapes.style.cssText = circleCssTextContent;
+
+    const circleInnerHtml = "<input type='number' class='radius' style='' /> ";
+    shapes.innerHTML = circleInnerHtml;
 
     next_btn.textContent = "CALCULATE";
 
@@ -183,7 +185,6 @@ function calculateAreaAndObjectOfTheShape() {
 
     next_btn.addEventListener("click", () => {
       shape["radius"] = document.querySelector(".radius").value; // Set shape["radius"] here
-      console.log("object", shape);
       const circleObject = {
         radius: shape["radius"] + " cm",
         area: shape.area() + " sq cm",
@@ -195,11 +196,13 @@ function calculateAreaAndObjectOfTheShape() {
     });
   }
   //if Square
-   else {
+  else {
     header.textContent = "2. Enter Side";
-    shapes.style.cssText =
+    const squareCssTextContent =
       "display:inline-block; text-align:center; color : white";
-    shapes.innerHTML = "<input type='number' class='side' /> ";
+    shapes.style.cssText = squareCssTextContent;
+    const squareInnerHtml = "<input type='number' class='side' />";
+    shapes.innerHTML = squareInnerHtml;
 
     next_btn.textContent = "CALCULATE";
 
@@ -207,7 +210,6 @@ function calculateAreaAndObjectOfTheShape() {
 
     next_btn.addEventListener("click", () => {
       shape["base"] = document.querySelector(".side").value; // Set shape["radius"] here
-      console.log("object", shape);
       const circleObject = {
         side: shape["base"] + " cm",
         area: shape.area() + " sq cm",
@@ -222,44 +224,40 @@ function calculateAreaAndObjectOfTheShape() {
 //end of calculateAreaAndObjectOfTheShape().
 
 //nextBtn function
-function nextBtn(shapeName, isRadius) {
+function nextBtn(shapeName) {
   shape["name"] = shapeName;
-  shape["isRadius"] = isRadius;
   next_btn.textContent = "NEXT";
-  next_btn.style.cssText =
-    "border : 2px solid white; background-color: black; color: white; padding-top : 8px;" +
-    " box-sizing: border-box; text-align: center; cursor: pointer";
-//this event will be removed inside the function calculateAreaAndObjectOfTheShape
+  const cssTextContent =
+    "border : 2px solid white; background-color: black; color: white; padding-top : 8px; box-sizing: border-box; text-align: center; cursor: pointer";
+  next_btn.style.cssText = cssTextContent;
+  //this event will be removed inside the function calculateAreaAndObjectOfTheShape
   next_btn.addEventListener("click", calculateAreaAndObjectOfTheShape);
 }
 //end of nextBtn function
 
 //toggleTick function
-function toggleTick(shape, shapeName, isRadius) {
-  console.log("class name", shapeName, "isRadius :", isRadius);
+function toggleTick(shape, shapeName) {
   const ticks = document.querySelectorAll(".tick");
   ticks.forEach((tick) => {
     tick.style.opacity = "0";
   });
   const tick = shape.querySelector(".tick"); //again selecting to make the opacity set to 1.
   tick.style.opacity = "1"; //this will make the check image opacity from 0 to 1 with a transition set to 0.3 secs.
-  nextBtn(shapeName, isRadius); //here concept of closure will come... it will search for value of currentShape in its parent environmennt.
+  nextBtn(shapeName); //here concept of closure will come... it will search for value of currentShape in its parent environmennt.
 }
 //end of toggleTick function
 
 //for triggering click event when clicked over the displaye shapes.
 document.querySelector(".circle").addEventListener("click", function () {
-  toggleTick(this, ".circle", true);
+  toggleTick(this, ".circle");
 });
-
 
 //for triggering click event when clicked over the displaye shapes.
 document.querySelector(".triangle").addEventListener("click", function () {
-  toggleTick(this, ".triangle", false);
+  toggleTick(this, ".triangle");
 });
-
 
 //for triggering click event when clicked over the displaye shapes.
 document.querySelector(".square").addEventListener("click", function () {
-  toggleTick(this, ".square", false);
+  toggleTick(this, ".square");
 });
