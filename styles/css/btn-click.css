@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
 
 /* copmmon reused stylings*/
 body {
@@ -61,12 +61,9 @@ body {
   color: #ffffff;
   text-align: center;
   font-size: 50px;
-  position: relative;
-  top: -50px;
+  margin-bottom: 50px;
   font-weight: 400;
 }
-
-
 
 /* shapes container for all the available shapes */
 .shapes {
@@ -75,7 +72,6 @@ body {
   position: relative;
   bottom: -50px;
 }
-
 
 /* circle shape  */
 .circle {
@@ -86,7 +82,6 @@ body {
   width: 170px;
   height: 170px;
 }
-
 
 /* triangle shape */
 .triangle {
@@ -99,7 +94,6 @@ body {
   position: relative;
 }
 
-
 /* square shape */
 .square {
   background-color: #e0e0e0;
@@ -108,7 +102,6 @@ body {
   width: 170px;
   height: 170px;
 }
-
 
 /* nxt_btn container */
 .btn_block {
@@ -129,23 +122,16 @@ body {
   /* background-color: rgb(147, 226, 147); */
 }
 
-
-
 /* image check used as child for transition affect in all the given shapes */
-.tick{
-  position: absolute;
-
-  /* used to center an element both horizontally and vertically within its parent element. */
-  transform: translate(-50%, -50%); 
-  
+.tick {
+  /* used to center an element both horizontally(x) and vertically(y) within its parent element. */
+  transform: translate(22%, 23%);
   font-size: 94px;
   bottom: -28px;
   color: #ffffff;
   opacity: 0;
   transition: opacity 0.3s;
-  right: 13px;
 }
-
 
 /* minor adjustment of the tick image in middle */
 .triangle_tick {
@@ -163,7 +149,6 @@ body {
   transition: opacity 0.3s;
 }
 
-
 /* last_page container for all the table structure defined for the last page */
 .last_page {
   display: flex;
@@ -177,8 +162,7 @@ body {
   flex-direction: column;
   align-items: center;
   color: #ffffff;
-  position: relative;
-  top: -30px;
+  margin-top: -30px;
 }
 
 /* table content structure for the last page  */
@@ -202,18 +186,15 @@ body {
   width: 190px;
 }
 
-
 /* middle column of the table structure */
 .middle {
   background-color: #455e7f;
 }
 
-
 /* last_column of the table structure */
 .last_column {
   background-color: #3388ff;
 }
-
 
 /* second_row of the table structure styled to create a space between the table rows' */
 .second_row {
@@ -224,7 +205,6 @@ body {
 .third_row {
   margin-top: 20px;
 }
-
 
 /* nxt_btn style as per the ux */
 .nxt_btn {
@@ -243,7 +223,6 @@ body {
   border-radius: 4px;
 }
 
-
 /* radius for the circle shape style and aligned as per the ux */
 .radius {
   background-color: #000000;
@@ -251,13 +230,13 @@ body {
   color: #ffffff;
   width: 700px;
   height: 66px;
-  margin-left: 10px;
-  position: relative;
+  /* margin-left: 10px; */
+  /* position: relative; */
   top: -20px;
   text-align: center;
+  font-size: 24px;
+  margin-top: -50px;
 }
-
-
 
 /* side styles as per the ux */
 .side {
@@ -266,12 +245,13 @@ body {
   color: #ffffff;
   width: 700px;
   height: 66px;
-  margin-left: 10px;
-  position: relative;
+  /* margin-left: 10px; */
+  /* position: relative; */
   top: -20px;
   text-align: center;
+  font-size: 25px;
+  margin-top: -80px;
 }
-
 
 /* last page triangle styled as per the ux */
 .last_page_triangle {
@@ -283,7 +263,6 @@ body {
   position: relative;
 }
 
-
 /* last page circle styled as per the ux */
 .last_page_circle {
   background-color: #00987c;
@@ -293,7 +272,6 @@ body {
   width: 170px;
   height: 170px;
 }
-
 
 /* last page square styled and aligned as per the ux */
 .last_page_square {
@@ -313,8 +291,6 @@ body {
   font-weight: 400;
 }
 
-
-
 /* base and height both are the class name of the input tag used for the triangle shape  */
 .base,
 .height {
@@ -325,12 +301,7 @@ body {
   width: 500px;
   height: 55px;
   text-align: center;
-}
-
-/* base input tag adjusted as per the ux */
-.base {
-  position: relative;
-  left: 6px;
+  font-size: 25px;
 }
 
 
@@ -350,25 +321,65 @@ body {
   cursor: pointer;
 }
 
-
-/* checked image used for transtion in the shape tags */
-.checked {
-  position: relative;
-  top: 15px;
-  left: 30px;
-}
-
-
 /* positon of image check adjusted for the triangle shape in the middle */
 .triangle_check {
-  position: relative;
-  left: -20px;
-  top: 3px;
+  transform: translate(-49%, 30%);
 }
-
-
 
 /* height block input tag for the triangle shape in the second ui page */
 .height_parent {
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-left: -16px;
+}
+
+#triangle_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#triangle_height::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#circle_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#square_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* .shapes_styles{
+
+} */
+
+.next_btn_style {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  padding-top: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+}
+
+.shapes_triangle_style {
+  display: inline-block;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.shape_circle_style {
+  display: inline-block;
+  text-align: center;
+}
+
+.shape_square_style {
+  display: inline-block;
+  text-align: center;
+  color: white;
 }
