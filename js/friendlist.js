@@ -19,12 +19,10 @@ fetch("friends.json")
       if (index % 3 === 0) {
         rowDiv = document.createElement("div");
         rowDiv.classList.add("row");
-        fragment.appendChild(rowDiv);
       }
 
       //creating div element.
       const divTag = document.createElement("div");
-
       divTag.classList.add('friend_list_child');
 
       const listContainerTag = document.createElement('div');
