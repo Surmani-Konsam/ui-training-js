@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
+
+/* copmmon reused stylings*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+/* .parent_container */
+.parent_container {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header for the math kids and kid learning app  */
+.header {
+  height: 70px;
+  width: 100%;
+  background-color: #a8e187;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  /* border: 2px solid black; */
+}
+
+/* extreme left header */
+.math_kids {
+  color: #000000;
+  padding-left: 30px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* extreme right header */
+.learning_app {
+  color: #000000;
+  padding-right: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* learning contnet container heaving all the learning shapes with header and next_btn*/
+.learning_content {
+  height: 890px;
+  width: 100%;
+  background-color: #000000;
+  /* border: 2px solid rgb(255, 255, 255); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* learning header the header above the shapes */
+.learning_header {
+  color: #ffffff;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+/* shapes container for all the available shapes */
+.shapes {
+  display: flex;
+  justify-content: center;
+  bottom: -50px;
+}
+
+/* circle shape  */
+.circle {
+  background-color: #00987c;
+  border-radius: 50%;
+  position: relative;
+  right: 40px;
+  width: 170px;
+  height: 170px;
+}
+
+/* triangle shape */
+.triangle {
+  width: 0;
+  height: 0;
+  /* background-color: #ffabdc; */
+  border-left: 100px solid #000000;
+  border-right: 100px solid #000000;
+  border-bottom: 170px solid #ffabdc;
+  position: relative;
+}
+
+/* square shape */
+.square {
+  background-color: #e0e0e0;
+  position: relative;
+  left: 70px;
+  width: 170px;
+  height: 170px;
+}
+
+/* nxt_btn container */
+.btn_block {
+  width: 100%;
+  height: 40px;
+  /* background-color: rgb(147, 226, 147); */
+  border: 2px solid #000000;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: -120px;
+}
+
+/* nxt_btn itself bind to event calculateAreaAndObjectOfTheShape and another arrow function bind to nxt_btn calculateAreaAndObjectOfTheShape() */
+.nxt_btn {
+  width: 100px;
+  height: 40px;
+  /* background-color: rgb(147, 226, 147); */
+}
+
+/* image check used as child for transition affect in all the given shapes */
+.tick {
+  /* used to center an element both horizontally(x) and vertically(y) within its parent element. */
+  transform: translate(22%, 23%);
+  font-size: 94px;
+  bottom: -28px;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* minor adjustment of the tick image in middle */
+.triangle_tick {
+  top: 55px;
+  left: -26px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* adjustments for square tick */
+.square_tick {
+  bottom: -25px;
+  right: 7px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* last_page container for all the table structure defined for the last page */
+.last_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* row container table structure parent .row_container */
+.row_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  margin-top: -30px;
+}
+
+/* table content structure for the last page  */
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  /* border: 2px solid white; */
+  width: 130px;
+  height: 50px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+/* first column of the table structure */
+.first_column {
+  background-color: #0b62d5;
+  width: 190px;
+}
+
+/* middle column of the table structure */
+.middle {
+  background-color: #455e7f;
+}
+
+/* last_column of the table structure */
+.last_column {
+  background-color: #3388ff;
+}
+
+/* second_row of the table structure styled to create a space between the table rows' */
+.second_row {
+  margin-top: 20px;
+}
+
+/* space styling same as .second_row */
+.third_row {
+  margin-top: 20px;
+}
+
+/* nxt_btn style as per the ux */
+.nxt_btn {
+  /* border: 2px solid white; */
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 12px;
+  /* box-sizing: border-box; */
+  text-align: center;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: 700;
+  /* font-stretch: expanded; */
+  width: 230px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+/* radius for the circle shape style and aligned as per the ux */
+.radius {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  width: 700px;
+  height: 66px;
+  /* margin-left: 10px; */
+  /* position: relative; */
+  text-align: center;
+  font-size: 24px;
+}
+
+/* side styles as per the ux */
+.side {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  width: 700px;
+  height: 66px;
+  /* margin-left: 10px; */
+  /* position: relative; */
+  top: -20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* last page triangle styled as per the ux */
+.last_page_triangle {
+  width: 0;
+  height: 0;
+  border-left: 90px solid #000000;
+  border-right: 90px solid #000000;
+  border-bottom: 170px solid #ffabdc;
+  position: relative;
+}
+
+/* last page circle styled as per the ux */
+.last_page_circle {
+  background-color: #00987c;
+  border-radius: 50%;
+  position: relative;
+  right: -2px;
+  width: 170px;
+  height: 170px;
+}
+
+/* last page square styled and aligned as per the ux */
+.last_page_square {
+  background-color: #e0e0e0;
+  position: relative;
+  left: 1px;
+  width: 150px;
+  height: 150px;
+}
+
+/* header of the second ui page styled per the ux */
+.triangle_header,
+.circle_header,
+.square_header {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+/* base and height both are the class name of the input tag used for the triangle shape  */
+.base,
+.height {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  margin-left: 10px;
+  width: 500px;
+  height: 55px;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* btn_reload styled as per the ux to reload the page to initial content of the page */
+.btn_reload {
+  position: relative;
+  bottom: -80px;
+  border: 2px solid #ffffff;
+  background-color: #000000;
+  color: #ffffff;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 900;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* positon of image check adjusted for the triangle shape in the middle */
+.triangle_check {
+  transform: translate(-49%, 30%);
+}
+
+/* height block input tag for the triangle shape in the second ui page */
+.height_parent {
+  margin-top: 20px;
+  margin-left: -16px;
+}
+
+/* to remove the triangle base input up and down arrow */
+#triangle_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* to remove the triangle height up and down arrow */
+#triangle_height::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* to remove circle input up and down arrow */
+#circle_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* to remove square input up and down arrow */
+#square_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* next_btn styling  */
+.next_btn_style {
+  border: 2px solid #ffffff;
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  margin-top: -60px;
+}
+
+
+/* input container for the triangle height and base input */
+.shapes_triangle_style {
+  display: inline-block;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+
+/* input container for circle radius input */
+.shape_circle_style {
+  display: inline-block;
+  text-align: center;
+}
