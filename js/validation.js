@@ -1,10 +1,4 @@
-// constants which are not changing
-const visible_error = "visible_error";
-const error_value1 = "error";
-const error_value2 = "hide_error";
-const red_border = "1px solid #ad1111";
-const grey_border = "1px solid #d0d0d0";
-
+import { visible_error,error_value1,error_value2,red_border,grey_border } from "../constants/validationconstants.js";
 
 
 function validateForm() {
@@ -159,7 +153,7 @@ function validateForm() {
     returnFormSubmit = false;
   }
   // else this block will be implemented to be compared with the currentDate the input tag need to be converted to Date object
-   else {
+  else {
     const expiryDate = new Date(expiry);
     const currentDate = new Date();
 
@@ -192,3 +186,5 @@ function validateForm() {
   //at the end returning the boolean if true all the input tag have right value else an input tag have an error.
   return returnFormSubmit;
 }
+
+validateForm();
