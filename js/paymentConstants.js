@@ -16,3 +16,6 @@ const paymentMethods = [
 ];
 
 export { paymentMethods };
+
+
+
