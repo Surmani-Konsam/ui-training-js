@@ -3,7 +3,7 @@ const friendListSpace = document.querySelector(".friendList");
 const fragment = document.createDocumentFragment();
 
 //fetching json file using fetch api
-fetch("friends.json")
+fetch("../data/friends.json")
   .then((response) => {
     //if response is not ok then throw error
     if (!response.ok) {
@@ -15,7 +15,6 @@ fetch("friends.json")
     let rowDiv;
     //if no error then json file will be iterated via forEach loop
     data.forEach((element, index)  => {
-
       if (index % 3 === 0) {
         rowDiv = document.createElement("div");
         rowDiv.classList.add("row");
