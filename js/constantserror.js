@@ -15,3 +15,4 @@ const pinDigitError = "Pin must be of 6 numbers";
 
 
 export { visible_error, error_value1, error_value2, red_border, grey_border,cvvInvalid,cvvRequired,cardExpiryInvalid,cardExpiryRequired,cardNumberIsInvalid,cardNumberIsRequired,pinDigitError,pinRequired};
+//errors exported.

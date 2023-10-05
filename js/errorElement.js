@@ -10,3 +10,4 @@ const expiry_error = document.querySelector(".expiry_date_error");
 
 
 export {first_name_error,last_name_error,email_error,contact_error,pin_error,card_error,cvv_error,expiry_error};
+//errors tag

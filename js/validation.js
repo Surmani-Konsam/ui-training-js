@@ -1,12 +1,43 @@
-import { visible_error,error_value1,error_value2,grey_border,red_border,cvvInvalid,cvvRequired,cardExpiryInvalid,cardExpiryRequired,cardNumberIsInvalid,cardNumberIsRequired,pinDigitError,pinRequired } from "./constantserror.js";
-import { first_name_error,last_name_error,email_error,expiry_error,card_error,cvv_error,contact_error,pin_error } from "./errorElement.js";
-import { contactRegex,emailRegex,usernameRegex } from "./regex.js";
-import { first_name,last_name,email,contact_border,pin_border,cardNumber_border,cvv_border,expiryTag } from "./formInputValue.js";
+import {
+  visible_error,
+  error_value1,
+  error_value2,
+  grey_border,
+  red_border,
+  cvvInvalid,
+  cvvRequired,
+  cardExpiryInvalid,
+  cardExpiryRequired,
+  cardNumberIsInvalid,
+  cardNumberIsRequired,
+  pinDigitError,
+  pinRequired,
+} from "./constantserror.js";
+import {
+  first_name_error,
+  last_name_error,
+  email_error,
+  expiry_error,
+  card_error,
+  cvv_error,
+  contact_error,
+  pin_error,
+} from "./errorElement.js";
+import { contactRegex, emailRegex, usernameRegex } from "./regex.js";
+import {
+  first_name,
+  last_name,
+  email,
+  contact_border,
+  pin_border,
+  cardNumber_border,
+  cvv_border,
+  expiryTag,
+} from "./formInputValue.js";
 
 
-
-document.querySelector("#form_body").onsubmit = ()=>{
-
+//form tag selected via id and onsubmit.
+document.querySelector("#form_body").onsubmit = () => {
   // function to show error when left empty or mismatch with the regex
   function showError(element, message) {
     element.classList.add(visible_error);
@@ -49,8 +80,6 @@ document.querySelector("#form_body").onsubmit = ()=>{
 
   let returnFormSubmit = true;
 
-
-
   //value fetched from the input tags
   const first_name_value = first_name.value;
   const last_name_value = last_name.value;
@@ -59,7 +88,6 @@ document.querySelector("#form_body").onsubmit = ()=>{
   const pin = pin_border.value;
   const cardNumber = cardNumber_border.value;
   const cvv = cvv_border.value;
- 
 
   // user first name validation
   returnFormSubmit = validateField(
@@ -169,6 +197,4 @@ document.querySelector("#form_body").onsubmit = ()=>{
 
   //at the end returning the boolean if true all the input tag have right value else an input tag have an error.
   return returnFormSubmit;
-}
-
-
+};
