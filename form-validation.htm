@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-validation</title>
+    <!--bind css style sheet to it-->
+    <link rel="stylesheet" href="styles/css/validation.css" />
+    <script src="js/validation.js" type="module"></script>
+  </head>
+
+  <body>
+    <!--parent container for form body-->
+    <article class="form_parent_container">
+      <!--figure used sirius parent container-->
+      <figure>
+        <!--figure specified in the assets folder-->
+        <img
+          src="assets/Sirius_CDW_Cobranded_PMS2747.svg"
+          alt="sirius cdw"
+          class="sirius_logo"
+        />
+      </figure>
+      <!--end of the sirius svg figure used-->
+      
+      <!--form_container, for body having all the required inputs-->
+      <form class="form_container" id="form_body" onsubmit="return validateForm()">
+        <!--form_content wrapper wrapping up all the input tag-->
+        <article class="form_content_wrapper">
+          <!--header for the billing details-->
+          <header class="form_header">BILLING DETAILS</header>
+          <!--first block containing the first name and the last name-->
+          <article class="first_block">
+            <!--container for the first_name input tag-->
+            <section class="first_name_container">
+              <label>First Name</label><br />
+              <input
+                type="text"
+                id="first_name"
+                placeholder="Enter your first name"
+              />
+              <!--div tag first_name_error made to populate with error context when put incorrect input-->
+              <div class="first_name_error"></div>
+            </section>
+            <!--container for the last_name-->
+            <section class="second_name_container">
+              <label>Last Name</label><br />
+              <input
+                type="text"
+                id="last_name"
+                placeholder="Enter your last name"
+              />
+               <!--div tag last_name_error made to populate with error context when put incorrect input-->
+              <div class="last_name_error"></div>
+            </section>
+          </article>
+          <!--end of the first block containing the first_name and the last_name-->
+          
+          <!--second block container containing only email address input tag-->
+          <article class="second_block">
+            <!--email_id container wrapping up the email input tag of type text-->
+            <section class="email_id_container">
+              <label>Email Address</label><br />
+              <input
+                type="text"
+                id="email_address"
+                placeholder="Enter your email addresss"
+                class="first_block_large_width"
+              />
+               <!--div tag email_address_error made to populate with error context when put incorrect input-->
+              <div class="email_address_error"></div>
+            </section>
+          </article>
+          <!--end of second block-->
+
+          <!--third block containing the contact number-->
+          <article class="third_block">
+            <!--contact number wrapper-->
+            <section class="contact_number_container">
+              <label>Contact Number</label><br />
+              <input
+                type="number"
+                id="contact_number"
+                placeholder="Enter your contact number"
+                class="first_block_large_width"
+              />
+               <!--div tag contact_number_error made to populate with error context when put incorrect input-->
+              <div class="contact_number_error"></div>
+            </section>
+          </article>
+          <!--end of third_block-->
+
+          <!--start of fourth_block containing pin code details-->
+          <article class="fourth_block">
+            <!--section wrapping up the pin code-->
+            <section class="contact_number_container pin_code_container">
+              <label>PIN Code</label><br />
+              <input
+                type="number"
+                id="pin_code"
+                placeholder="Enter your pin code"
+                class="first_block_large_width"
+              />
+              <!--div tag pin_number_error made to populate with error context when put incorrect input-->
+              <div class="pin_code_error"></div>
+            </section>
+          </article>
+          <!--end of the fourth block-->
+          
+          <!--payment_detail_container block containing the cardnumber, expiry date and cvv number-->
+          <article class="payment_detail_container">
+            <!--header for the payment details-->
+            <header class="payment_header">PAYMENT DETAILS</header>
+            <!--payment first block container containing the card numder details-->
+            <article class="payment_first_block">
+              <!--wrapping up the card_number details-->
+              <section class="card_number_container">
+                <label>Card Number</label><br />
+                <input
+                  type="number"
+                  id="card_number"
+                  placeholder="Enter your card number"
+                  class="first_block_large_width"
+                />
+                <!--div tag card_number_error made to populate with error context when put incorrect input-->
+                <div class="card_number_error"></div>
+              </section>
+            </article>
+            <!--end of the payment block-->
+            <!--payment_second_block containing the expiry and the cvv number-->
+            <article class="payment_second_block">
+              <!--expiry date container-->
+              <section class="first_name_container card_expiry_container">
+                <label>Card Expiry (Year)</label><br />
+                <input
+                  type="date"
+                  id="expiry_date"
+                  placeholder="Enter your card expiry date"
+                />
+                <!--div tag expiry_date_error made to populate with error context when put incorrect input-->
+                <div class="expiry_date_error"></div>
+              </section>
+              <!--cvv number container-->
+              <section class="second_name_container cvv_container">
+                <label>CVV</label><br />
+                <input
+                  type="number"
+                  id="cvv_number"
+                  placeholder="Enter your cvv number"
+                  class="expiry_box"
+                />
+                <!--div tag cvv_number_error made to populate with error context when put incorrect input-->
+                <div class="cvv_error"></div>
+              </section>
+            </article>
+          </article>
+          <!--submit btn inside the form_container-->
+          <section class="submit_btn">
+            <input
+              type="submit"
+              value="COMPLETE PAYMENT"
+              class="payment_btn"
+              id="payment">
+          </section>
+          <!--end of the submit btn-->
+        </article>
+      </form>
+      <!--end of form body-->
+    </article>
+  </body>
+</html>

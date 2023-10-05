@@ -1,0 +1,198 @@
+/* import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
+
+/* rewriting default styles and for common styles use. */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", "sans-serif";
+}
+
+/* parent container for form body */
+.form_parent_container {
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* sirius logo available in assets folder */
+.sirius_logo {
+  width: 280px;
+  margin-top: -57px;
+}
+
+/* form_header -> Billing details and payment header-> payment details style */
+.form_header,
+.payment_header {
+  color: #042074;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* form container inside the form parent container */
+.form_container {
+  width: 38%;
+  height: auto;
+  background-color: #ffffff;
+  /* position: relative; */
+  margin-top: -55px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 50px 0 40px 0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.054);
+}
+
+/* width of the form body tag */
+.form_content_wrapper {
+  width: 90%;
+}
+
+/* first block container firstname and last name */
+.first_block {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+/* label for all the input tag used */
+label {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* input tag used for the form container */
+input {
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+/* input tag with id first_name, last_name, cvv_number and expiry_date styled to match with the UX */
+#first_name,
+#last_name,
+#cvv_number,
+#expiry_date {
+  /* background-color: aquamarine; */
+  width: 16.5vw;
+  height: 46px;
+  border-radius: 4px;
+  border: 1px solid #d0d0d0;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+/* second block for the email id */
+.second_block {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+/* third block for the contact number */
+.third_block {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+/* fourth block for the pin_code container */
+.fourth_block {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+/* width of the first block */
+.first_block_large_width {
+  width: 34.2vw;
+  height: 46px;
+  border-radius: 4px;
+  border: 1px solid #d0d0d0;
+}
+
+/* parent container for the payment details */
+.payment_detail_container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* padding-top: 20px; */
+  margin-top: 35px;
+}
+
+/* card number container */
+.card_number_container {
+  padding-top: 20px;
+}
+
+/* payment block container expiry date and cvv number */
+.payment_second_block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* payment_btn styling */
+.payment_btn {
+  width: 34.2vw;
+  margin-top: 30px;
+  padding: 15px 0 15px 0;
+  color: #ffff;
+  background-color: #042074;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/* removing up and down arrow for the cvv input tag number type */
+#cvv_number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* removing card number input numer type up and down arrow */
+#card_number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* removing pin code up and down arrow input number type */
+#pin_code::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* hiding the error will be used as classlist when the input given matches with the regex */
+.hide_error {
+  visibility: hidden;
+}
+
+/* error will be visible again when the input doesn't meet the ux requirement and doesn't matches the regex */
+.visible_error {
+  visibility: visible;
+}
+
+/* error text appearing below the input for incorrect input */
+.error {
+  font-size: 10px;
+  font-weight: 400;
+  color: #ad1111;
+}
+
+/* will style the border of the input tag when put incorrect input */
+.border_error {
+  border: 1px solid #ad1111;
+}
+
+/* input tag made margin top 5px to have space between the label and the input tag */
+input {
+  margin-top: 5px;
+}
