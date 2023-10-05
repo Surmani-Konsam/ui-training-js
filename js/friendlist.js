@@ -3,6 +3,7 @@ const friendListSpace = document.querySelector(".friendList");
 const fragment = document.createDocumentFragment();
 
 //fetching json file using fetch api
+function dataAssignment(){
 fetch("../data/friends.json")
   .then((response) => {
     //if response is not ok then throw error
@@ -71,11 +72,6 @@ fetch("../data/friends.json")
       const emailId = divTag.querySelector(".email_id");
       emailId.classList.add('email_id_style');
       
-
-      // const cssText =
-      //   "box-sizing: border-box;margin-left: 20px; display: flex;flex-direction: column;justify-content: space-evenly;height: 60px;margin-top: 10px;";
-      // divTag.querySelector(".friend_name").style.cssText = cssText; //adding style to the friend name for ux to ui match.
-       //divTag will be appended iteratively to the parent container friendListSpace until last value of the json file read.
       rowDiv.appendChild(divTag);
       fragment.appendChild(rowDiv)
 
@@ -86,3 +82,6 @@ fetch("../data/friends.json")
     //if there is error in reading the json file will catch the error and log it to the console.
     console.error("Error fetching the JSON file:", error);
   });
+}
+
+dataAssignment();
