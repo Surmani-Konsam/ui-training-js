@@ -1,7 +1,12 @@
-import { visible_error,error_value1,error_value2,red_border,grey_border } from "../constants/validationconstants.js";
+import { visible_error,error_value1,error_value2,grey_border,red_border,cvvInvalid,cvvRequired,cardExpiryInvalid,cardExpiryRequired,cardNumberIsInvalid,cardNumberIsRequired,pinDigitError,pinRequired } from "./constantserror.js";
+import { first_name_error,last_name_error,email_error,expiry_error,card_error,cvv_error,contact_error,pin_error } from "./errorElement.js";
+import { contactRegex,emailRegex,usernameRegex } from "./regex.js";
+import { first_name,last_name,email,contact_border,pin_border,cardNumber_border,cvv_border,expiryTag } from "./formInputValue.js";
 
 
-function validateForm() {
+
+document.querySelector("#form_body").onsubmit = ()=>{
+
   // function to show error when left empty or mismatch with the regex
   function showError(element, message) {
     element.classList.add(visible_error);
@@ -44,38 +49,17 @@ function validateForm() {
 
   let returnFormSubmit = true;
 
-  // Define error elements with div tag for the error text content below the input tags
-  const first_name_error = document.querySelector(".first_name_error");
-  const last_name_error = document.querySelector(".last_name_error");
-  const email_error = document.querySelector(".email_address_error");
-  const contact_error = document.querySelector(".contact_number_error");
-  const pin_error = document.querySelector(".pin_code_error");
-  const card_error = document.querySelector(".card_number_error");
-  const cvv_error = document.querySelector(".cvv_error");
-  const expiry_error = document.querySelector(".expiry_date_error");
 
-  // the input tags for the user input
-  const first_name = document.getElementById("first_name");
-  const last_name = document.getElementById("last_name");
-  const email = document.getElementById("email_address");
-  const contact_border = document.getElementById("contact_number");
-  const pin_border = document.getElementById("pin_code");
-  const cardNumber_border = document.getElementById("card_number");
-  const cvv_border = document.getElementById("cvv_number");
 
   //value fetched from the input tags
   const first_name_value = first_name.value;
   const last_name_value = last_name.value;
   const email_value = email.value;
-  const contact = document.getElementById("contact_number").value;
-  const pin = document.getElementById("pin_code").value;
-  const cardNumber = document.getElementById("card_number").value;
-  const cvv = document.getElementById("cvv_number").value;
-
-  // regex defined for user_first_name, last_name and email_id
-  const usernameRegex = /^[A-Z][a-zA-Z]{0,29}$/;
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
-  const contactRegex = /^[0][789]\d{9}$/;
+  const contact = contact_border.value;
+  const pin = pin_border.value;
+  const cardNumber = cardNumber_border.value;
+  const cvv = cvv_border.value;
+ 
 
   // user first name validation
   returnFormSubmit = validateField(
@@ -116,11 +100,11 @@ function validateForm() {
   //validation defined here again for the pin number, card_number,expiry date and cvv since they don't required any regex for validation hence segregated
   // pin number validation
   if (pin.trim() === "") {
-    showError(pin_error, "Pin number is required");
+    showError(pin_error, pinRequired);
     setBorderStyle(pin_border, red_border);
     returnFormSubmit = false;
   } else if (pin.trim().length !== 6) {
-    showError(pin_error, "Pin must be of 6 numbers");
+    showError(pin_error, pinDigitError);
     setBorderStyle(pin_border, red_border);
     returnFormSubmit = false;
   } else {
@@ -130,11 +114,11 @@ function validateForm() {
 
   // card number validation
   if (cardNumber.trim() === "") {
-    showError(card_error, "Card Number is required");
+    showError(card_error, cardNumberIsRequired);
     setBorderStyle(cardNumber_border, red_border);
     returnFormSubmit = false;
   } else if (cardNumber.trim().length !== 16) {
-    showError(card_error, "Card Number is invalid");
+    showError(card_error, cardNumberIsInvalid);
     setBorderStyle(cardNumber_border, red_border);
     returnFormSubmit = false;
   } else {
@@ -143,11 +127,11 @@ function validateForm() {
   }
 
   //to string, because the document.getElementById() -> getsv value in type string.
-  const expiry = document.getElementById("expiry_date").value;
+  const expiry = expiryTag.value;
 
   // if empty string expiry this if condition will be implemented
   if (!expiry) {
-    showError(expiry_error, "Card expiry is required");
+    showError(expiry_error, cardExpiryRequired);
     expiry_error.classList.add(visible_error);
     expiry_error.classList.add(error_value1);
     returnFormSubmit = false;
@@ -158,7 +142,7 @@ function validateForm() {
     const currentDate = new Date();
 
     if (expiryDate < currentDate) {
-      showError(expiry_error, "Card expiry is not valid");
+      showError(expiry_error, cardExpiryInvalid);
       expiry_error.classList.add(visible_error);
       expiry_error.classList.add(error_value1);
       returnFormSubmit = false;
@@ -171,11 +155,11 @@ function validateForm() {
 
   // cvv number validation
   if (cvv.trim() === "") {
-    showError(cvv_error, "CVV is required");
+    showError(cvv_error, cvvRequired);
     setBorderStyle(cvv_border, red_border);
     returnFormSubmit = false;
   } else if (cvv.trim().length !== 3) {
-    showError(cvv_error, "CVV is invalid");
+    showError(cvv_error, cvvInvalid);
     setBorderStyle(cvv_border, red_border);
     returnFormSubmit = false;
   } else {
@@ -187,4 +171,4 @@ function validateForm() {
   return returnFormSubmit;
 }
 
-validateForm();
+
