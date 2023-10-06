@@ -4,119 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blender movie</title>
-    <script src="js/blender.js" defer></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
+    
+    <!--type module js file-->
+    <script src="js/blender.js" type="module"></script>
 
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: "Roboto", "sans-serif";
-      }
-
-      .parent_container {
-        width: 100%;
-        height: 100vh;
-        /* background-color: rgb(177, 245, 245); */
-      }
-
-      .header_bar {
-        width: inherit;
-        height: 80px;
-        background-color: rgb(195, 154, 234);
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.69);
-        display: flex;
-        justify-content: center;
-      }
-      .header_content {
-        width: 70%;
-        height: inherit;
-        background-color: rgb(154, 241, 154);
-        display: flex;
-        justify-content: space-between;
-        box-sizing: border-box;
-        padding-top: 30px;
-      }
-      .user_name {
-        display: flex;
-        width: 10%;
-        justify-content: space-between;
-      }
-      .profile_picture {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: blue;
-      }
-
-      .content_container {
-        width: 70%;
-        margin: auto;
-      }
-
-      .movie_details {
-        width: 70%;
-        height: 1000px;
-        margin-top: 30px;
-        position: relative;
-      }
-
-      .play-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 50px;
-        height: 50px;
-        background-color: rgba(0, 0, 0, 0.5);
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-
-      .play-button:before {
-        content: "\25BA"; /* Unicode for the play icon */
-        font-size: 30px;
-        color: white;
-      }
-
-      .video_width {
-        width: 100%;
-        margin: auto;
-      }
-
-      .movie_text {
-        font-weight: 300;
-        font-size: 10px;
-        line-height: 15px;
-      }
-    </style>
+    <!--external style sheet-->
+    <link rel="stylesheet" href="styles/css/blenderstyle.css" />
   </head>
+
   <body>
+    <!--parent container container -->
     <div class="parent_container">
       <header class="header_bar">
+
         <section class="header_content">
+          <!--movie title to the extreme left-->
           <section class="header_title">Blender Movies</section>
-          <section class="user_name">
-            Steffy Jerry
-            <div class="profile_picture"></div>
+
+          <!--profile picture with user name to the extreme right-->
+          <section class="profile">
+            <!--user name-->
+            <span class="user_name">Steffy Jerry</span>
+            <!--user profile picture-->
+            <span class="image_content"
+              ><img
+                src="images/reviewers/naruto.jpeg"
+                alt="image not available"
+                class="profile_pic"
+            /></span>
           </section>
+          <!--end of profile section-->
         </section>
+        <!--end of header content-->
       </header>
+
+      <!--display flex for both left and right block content_container being the parent container-->
       <section class="content_container">
+        <!--left block-->
         <section class="movie_details">
-          <video controls poster="assets/reviewers/jim.png" class="video">
+          <video controls class="video">
             <source class="video_source" type="video/mp4" />
           </video>
-          <button class="play-button" onclick="playVideo()"></button>
+          <!-- <button class="play-button" onclick="playVideo()"></button> -->
           <figcaption class="movie_description">
             <header class="movie_name"></header>
             <section class="about_movie"></section>
           </figcaption>
+
+          <!--line separting the movie details and the comments by the reviewer-->
           <hr />
-          <section></section>
+
+          <!--comments of the reviewer-->
+          <header class="comment_header">Comments</header>
+          <!--left empty for populating via js file fetch api reading from video.json-->
+          <section class="comment_section"></section>
         </section>
+
+        <!--right block containing upcoming projects-->
+        <div class="movie_project">
+          <!--upcoming projects header, movie project will be populated via upcoming projects fetched from posters.json file-->
+          <div class="upcoming_project">Upcoming Projects</div>
+        </div>
       </section>
+
+      <!--footer container containg at the page bottom containing copyright icon and the movie title-->
+      <footer class="footer">
+        <div class="footer_content">
+          <!--copyright icon to the extreme left-->
+          <div class="footer_copyright">
+            <div class="copyright_icon">©</div>
+            <div class="copyright_text">Copyright 2022</div>
+          </div>
+
+          <!--header to the extreme right-->
+          <div class="footer_text">Blender movies</div>
+        </div>
+      </footer>
+
+      <!--fixed icon-->
+      <div class="fixed_icon">
+        <img
+          src="assets/noun-advice-3116855 (1).png"
+          alt="chat_bubble"
+          class="chat_bubble"
+        />
+      </div>
     </div>
   </body>
 </html>
