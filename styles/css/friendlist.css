@@ -1,0 +1,110 @@
+/* importing google fonts for roboto font */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
+
+/* body tag for common css style and undo default browser css style */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", "sans-serif";
+}
+
+/* parent_container */
+.parent_container {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* header for the parent container */
+.header {
+  width: 100%;
+  /* height: 900px; */
+  background-color: #3b1c67;
+  box-sizing: border-box;
+  color: #ffff;
+  /* padding-bottom: 30px; */
+  padding: 30px 0 30px 35px;
+  /* padding-left: 35px;  */
+  font-size: 25px;
+  font-weight: 300;
+}
+
+/* friendList which have all the friend list appended in loop */
+.friendList {
+  width: 90%;
+  height: auto;
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+/* row div tag added while iterating untill index%3==0 */
+.row {
+  /* background-color: yellow; */
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* styling for the friend_list_child which is the child of the div tag row */
+.friend_list_child {
+  width: 29vw;
+  height: 120px;
+  background-color: #4d66b4;
+}
+
+/* styling image container dimension */
+.image_container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* circular image within friend_list_child */
+.image_space {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* styling for the container containing email,name and image*/
+.list_container_style {
+  display: flex;
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+
+/* styling the name of the friend */
+.name_style {
+  color: #ffff;
+  font-size: 21px;
+}
+
+/* email_id styling  */
+.email_id_style {
+  color: #ffff;
+  font-weight: 300;
+}
+
+
+/* friend name containing email id and name  */
+.friend_name {
+  box-sizing: border-box;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 60px;
+  margin-top: 10px;
+}
+
