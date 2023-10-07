@@ -1,7 +1,6 @@
 /* import of google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
 
-
 /* common fonts and default padding,margin of the browser set to 0 */
 body {
   padding: 0;
@@ -9,13 +8,11 @@ body {
   font-family: "Roboto", "sans-serif";
 }
 
-
 /* parent container */
 .parent_container {
   width: 100%;
   background-color: #f5f5f5;
 }
-
 
 /* header bar containing header content and header title as content */
 .header_bar {
@@ -44,7 +41,6 @@ body {
   font-weight: 500;
 }
 
-
 /* container for movied details + comments on one block and upcoming projects as another */
 .content_container {
   width: 70%;
@@ -68,7 +64,6 @@ body {
 .profile {
   display: flex;
 }
-
 
 /* username content of profile container */
 .user_name {
@@ -159,15 +154,12 @@ hr {
   font-weight: 500;
 }
 
-
 /* movie project wrapper for the upcoming project header and the movie lisdt */
 .movie_project {
-    width: 24%;
-    height: 143.5vh;
-    display: block;
+  width: 24%;
+  height: 143.5vh;
+  display: block;
 }
-
-
 
 /* upcoming project header for the right block upcoming projects movies */
 .upcoming_project {
@@ -175,7 +167,6 @@ hr {
   font-size: 18px;
   font-weight: 500;
 }
-
 
 /* movie image is the parent container of the fetched images */
 .movie_image {
@@ -249,18 +240,17 @@ hr {
 
 /* chatbubble child div of fixed_icon */
 .chat_bubble {
-    /* color: white; */
-    /* background-color: white; */
-    height: 30px;
-    width: auto;
-    position: absolute;
-    bottom: 12px;
-    right: 17px;
+  /* color: white; */
+  /* background-color: white; */
+  height: 30px;
+  width: auto;
+  position: absolute;
+  bottom: 12px;
+  right: 17px;
 }
 
-
 /* media screen for when the inspect is done for full width */
-@media screen and (max-width: 1437px) {
+@media screen and (max-width: 1688px) {
   .project_image {
     width: 100%;
     height: 45vh;
@@ -271,7 +261,7 @@ hr {
     width: 100%;
     height: 80px;
     background-color: #222222;
-    margin-top: 55px;
+    margin-top: 95px;
     position: relative;
     /* top: 0px; */
   }
