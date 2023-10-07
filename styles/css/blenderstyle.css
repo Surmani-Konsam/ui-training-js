@@ -1,0 +1,373 @@
+/* import of google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
+
+/* common fonts and default padding,margin of the browser set to 0 */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", "sans-serif";
+}
+
+/* parent container */
+.parent_container {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+/* header bar containing header content and header title as content */
+.header_bar {
+  width: inherit;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.196);
+  display: flex;
+  justify-content: center;
+}
+
+/* header content wrapping text and image of the user */
+.header_content {
+  width: 70%;
+  height: inherit;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+/* header title extreme left */
+.header_title {
+  font-size: 120%;
+  font-weight: 500;
+}
+
+/* container for movied details + comments on one block and upcoming projects as another */
+.content_container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie_details {
+  width: 74%;
+  height: 1000px;
+  margin-top: 20px;
+}
+
+.video_width {
+  width: 100%;
+  margin: auto;
+}
+
+/* profile picture container to the extreme right of the header content */
+.profile {
+  display: flex;
+}
+
+/* username content of profile container */
+.user_name {
+  font-size: 0.7vw;
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+/* profile picture in circular shape, content of the profile container */
+.profile_pic {
+  width: 2vw;
+  height: auto;
+  border-radius: 50%;
+  margin-top: -8px;
+}
+
+/* movie description -> containing movie header and movie description */
+.movie_description {
+  margin-top: 15px;
+}
+
+/* movie header */
+.movie_name {
+  font-size: 25px;
+}
+
+/* about movie detail */
+.movie_text {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  margin-top: 9px;
+  word-spacing: 4px;
+  line-height: 19px;
+}
+
+/* line separating between the movie details and the comments */
+hr {
+  border-width: 0.5px;
+  margin-top: 25px;
+}
+
+/* comment section child child of the comment section created using createElement div in file comments.js */
+.comment_section_child {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+/* figure container created each time while looping video.json response */
+.figure_container {
+  width: 60px;
+  height: auto;
+  margin: 0;
+}
+
+/* image container for the reviewer image */
+.image_container {
+  width: inherit;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* comment container for the reviewer containing the reviewer name as header and the review  */
+.comment_container {
+  width: 810px;
+  font-size: 15px;
+}
+
+/* review by reviewer */
+.reviewer_comment {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 6px;
+}
+
+/* reviewer name */
+.reviewer {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* header for the comment section */
+.comment_header {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* movie project wrapper for the upcoming project header and the movie lisdt */
+.movie_project {
+  width: 24%;
+  height: 143.5vh;
+  display: block;
+}
+
+/* upcoming project header for the right block upcoming projects movies */
+.upcoming_project {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* movie image is the parent container of the fetched images */
+.movie_image {
+  width: 100%;
+}
+
+/* fetched image from poster.json adjusted height and alignment */
+.project_image {
+  width: 100%;
+  height: 420px;
+  margin-top: 10px;
+}
+
+/* parent container for footer_content */
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: #222222;
+  margin-top: -60px;
+  position: relative;
+  top: 0px;
+}
+
+/* footer content containing copyright and header -> blender movies */
+.footer_content {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+/* parent container for copyright icon and header footer */
+.footer_copyright {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+}
+
+/* extreme right content of footer_content */
+.footer_text {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* copyright icon c within cirlce */
+.copyright_icon {
+  font-size: 20px;
+}
+
+/* copyright text extreme left text of footer content */
+.copyright_text {
+  margin-left: 5px;
+  box-sizing: border-box;
+  padding-top: 3px;
+}
+
+/* circular chat bubble icon made fixed  */
+.fixed_icon {
+  width: 60px;
+  position: fixed;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #c432ae;
+  bottom: 50px;
+  right: 40px;
+}
+
+/* chatbubble child div of fixed_icon */
+.chat_bubble {
+  /* color: white; */
+  /* background-color: white; */
+  height: 30px;
+  width: auto;
+  position: absolute;
+  bottom: 12px;
+  right: 17px;
+}
+
+/* media screen for when the inspect is done for full width */
+@media screen and (max-width: 1688px) {
+  .project_image {
+    width: 100%;
+    height: 45vh;
+    margin-top: 10px;
+  }
+
+  .footer {
+    width: 100%;
+    height: 80px;
+    background-color: #222222;
+    margin-top: 95px;
+    position: relative;
+    /* top: 0px; */
+  }
+}
+
+/* media query for mobile screen max width 765px */
+@media screen and (max-width: 765px) {
+  body {
+    background-color: #f5f5f5;
+  }
+  .parent_container {
+    width: 100%;
+    height: 165vh;
+    /* background-color: #f5f5f5; */
+  }
+
+  .header_bar {
+    width: 70%;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header_content {
+    background-color: #f5f5f5;
+  }
+
+  .profile_pic {
+    width: 5vw;
+    height: auto;
+    border-radius: 50%;
+    margin-top: -8px;
+  }
+
+  .header_content {
+    width: 100%;
+  }
+
+  .content_container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .movie_details {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .movie_project {
+    width: 100%;
+    height: 143.5vh;
+    display: block;
+    margin-top: 40px;
+  }
+
+  .project_image {
+    width: 100%;
+    height: 120vh;
+    margin-top: 10px;
+  }
+
+  .footer {
+    width: 70%;
+    height: 80px;
+    background-color: #222222;
+    position: relative;
+    top: 2070px;
+    margin: auto;
+  }
+
+  .footer_content {
+    width: 70%;
+    display: flex;
+    /* justify-content: space-between; */
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 14px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .copyright_text {
+    margin-left: 15px;
+    box-sizing: border-box;
+    padding-top: 3px;
+  }
+
+  .footer_text {
+    font-size: 150%;
+    font-weight: 900;
+    color: #ffffff;
+  }
+
+  .fixed_icon {
+    /* width: 8.8vw; */
+    position: fixed;
+    /* height: 8vh; */
+    border-radius: 50%;
+    background-color: #c432ae;
+    bottom: 35px;
+    right: 140px;
+  }
+}

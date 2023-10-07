@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blender movie</title>
+    
+    <!--type module js file-->
+    <script src="js/blender.js" type="module"></script>
+
+    <!--external style sheet-->
+    <link rel="stylesheet" href="styles/css/blenderstyle.css" />
+  </head>
+
+  <body>
+    <!--parent container container -->
+    <div class="parent_container">
+      <header class="header_bar">
+
+        <section class="header_content">
+          <!--movie title to the extreme left-->
+          <section class="header_title">Blender Movies</section>
+
+          <!--profile picture with user name to the extreme right-->
+          <section class="profile">
+            <!--user name-->
+            <span class="user_name">Steffy Jerry</span>
+            <!--user profile picture-->
+            <span class="image_content"
+              ><img
+                src="images/reviewers/naruto.jpeg"
+                alt="image not available"
+                class="profile_pic"
+            /></span>
+          </section>
+          <!--end of profile section-->
+        </section>
+        <!--end of header content-->
+      </header>
+
+      <!--display flex for both left and right block content_container being the parent container-->
+      <section class="content_container">
+        <!--left block-->
+        <section class="movie_details">
+          <video controls class="video">
+            <source class="video_source" type="video/mp4" />
+          </video>
+          <!-- <button class="play-button" onclick="playVideo()"></button> -->
+          <figcaption class="movie_description">
+            <header class="movie_name"></header>
+            <section class="about_movie"></section>
+          </figcaption>
+
+          <!--line separting the movie details and the comments by the reviewer-->
+          <hr />
+
+          <!--comments of the reviewer-->
+          <header class="comment_header">Comments</header>
+          <!--left empty for populating via js file fetch api reading from video.json-->
+          <section class="comment_section"></section>
+        </section>
+
+        <!--right block containing upcoming projects-->
+        <div class="movie_project">
+          <!--upcoming projects header, movie project will be populated via upcoming projects fetched from posters.json file-->
+          <div class="upcoming_project">Upcoming Projects</div>
+        </div>
+      </section>
+
+      <!--footer container containg at the page bottom containing copyright icon and the movie title-->
+      <footer class="footer">
+        <div class="footer_content">
+          <!--copyright icon to the extreme left-->
+          <div class="footer_copyright">
+            <div class="copyright_icon">©</div>
+            <div class="copyright_text">Copyright 2022</div>
+          </div>
+
+          <!--header to the extreme right-->
+          <div class="footer_text">Blender movies</div>
+        </div>
+      </footer>
+
+      <!--fixed icon-->
+      <div class="fixed_icon">
+        <img
+          src="assets/noun-advice-3116855 (1).png"
+          alt="chat_bubble"
+          class="chat_bubble"
+        />
+      </div>
+    </div>
+  </body>
+</html>
