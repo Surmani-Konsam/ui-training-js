@@ -1,0 +1,37 @@
+[
+  {
+    "userName": "John",
+    "A/C_No": "ABC123",
+    "cardNumber": "12345678",
+    "PIN": 1234,
+    "account_balance": 40000
+  },
+  {
+    "userName": "Mary",
+    "A/C_No": "MAR123",
+    "cardNumber": "12445678",
+    "PIN": 1244,
+    "account_balance": 80000
+  },
+  {
+    "userName": "Sina",
+    "A/C_No": "Sina123",
+    "cardNumber": "12545678",
+    "PIN": 1254,
+    "account_balance": 20000
+  },
+  {
+    "userName": "Shyam",
+    "A/C_No": "Shyam123",
+    "cardNumber": "12945678",
+    "PIN": 1294,
+    "account_balance": 45000
+  },
+  {
+    "userName": "Kelly",
+    "A/C_No": "Kelly123",
+    "cardNumber": "12045678",
+    "PIN": 1204,
+    "account_balance": 90000
+  }
+]
