@@ -8,7 +8,7 @@ import { userDetails } from "./js/fetchDetails.js";
  * @param {*} PIN
  * @param {*} amount
  * @param {*} userDetails { a call back function to get the userDetails : cardNumber and pin to validate }
- * @param {*} depositeOrWithdraw
+ * @param {*} depositeOrWithdraw deposite and withdraw
  */
 function bankFunction(
   cardNumber,
