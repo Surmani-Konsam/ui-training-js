@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,900&display=swap");
+
+* {
+  background-color: #f5f5f5;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", "sans-serif";
+}
+
+/* sirius logo available in assets folder */
+.sirius_logo {
+  width: 280px;
+  margin-top: -43px;
+}
+
+.logo_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.buttons_container {
+  display: flex;
+  width: 682px;
+  background-color: #f5f5f5;
+}
+
+.main_content {
+  background-color: #ffffff;
+  width: 682px;
+  margin: auto;
+  height: 640px;
+  overflow: scroll;
+}
+
+.btn_style {
+  background-color: #000000;
+  color: #f5f5f5;
+  padding: 12px 6px 12px 30px;
+  font-size: 12px;
+  font-stretch: expanded;
+  font-weight: 700;
+  width: 90px;
+  margin-left: 19px;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+
+.addBackgroundColor {
+  background-color: #001b71;
+  color: #f5f5f5;
+}
+
+.blackBackground {
+  background-color: #000000;
+}
+
+.textContent {
+  color: #000000;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  align-items: center;
+  justify-content: center;
+}
+
+.text_content {
+  font-weight: 300;
+  font-size: 14.5px;
+  background-color: #ffffff;
+  padding: 21px 21px 0 21px;
+  line-height: 1.5;
+}
+
+.image_meeting {
+  width: 600px;
+  height: 250px;
+  margin: 16px 0 16px 0;
+}
+
+.digital {
+  color: #ffffff;
+  background-color: #808eb9;
+  cursor: pointer;
+  padding: 12px 500px 12px 18px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  margin: 10px 0 0 20px;
+  width: 640px;
+  text-align: left;
+  box-sizing: border-box;
+  font-size: 12px;
+  transition: all ease-in-out 0.36s;
+}
+
+.panel {
+  border: 1px solid #808eb9;
+  margin-left: 20px;
+  width: 638px;
+}
+
+.digital_content {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.digital_content {
+  font-size: 10px;
+  box-sizing: border-box;
+  padding: 12px 14px 12px 12px;
+  font-weight: 300;
+}
+
+.accordian_container {
+  background-color: #ffffff;
+}
+
+.row {
+  background-color: #808eb9;
+  width: 600px;
+  margin: auto;
+  padding: 10px 22px 10px 22px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  text-align: right;
+}
+
+.row:nth-child(even) {
+  margin-top: 10px;
+  background-color: #f2d9f7;
+}
+
+.row:nth-child(odd) {
+  margin-top: 10px;
+  background-color: #eeeeee;
+}
+
+.colorPink {
+  background-color: #f2d9f7;
+}
+
+.colorGrey {
+  background-color: #eeeeee;
+}
+
+.country_list {
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+.country_style {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 180px;
+  justify-content: space-between;
+}
+
+.image_style {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.country_name_style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.city_alignment {
+  box-sizing: border-box;
+  padding-left: 9px;
+}
+
+.assurance {
+  padding-right: 3px;
+}
+
+.adjustAlignment {
+  width: 100px;
+  text-align: left;
+}
+
+.cityAlignment.colorGrey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contactAlignment.colorGrey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
